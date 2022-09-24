@@ -1,10 +1,7 @@
-﻿using BooksManagement_Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using BooksManagement_DataAccess.DatabaseControl;
+using BooksManagement_Domain;
 using System.Text.Json;
-using System.Threading.Tasks;
+
 
 namespace BooksManagement_DataAccess.DefaultInfo
 {
@@ -16,7 +13,10 @@ namespace BooksManagement_DataAccess.DefaultInfo
         {
             string contents = File.ReadAllText("DefaultUsers.json");
             var defaultUsers = JsonSerializer.Deserialize<List<User>>(contents);
-
+            foreach (var user in defaultUsers)
+            {
+                UserControl.AddUser(user);
+            }
         }
     }
 }

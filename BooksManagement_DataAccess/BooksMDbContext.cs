@@ -4,7 +4,7 @@ using System.Reflection.Metadata;
 
 namespace BooksManagement_DataAccess
 {
-    public class BooksMDbContext : DbContext
+    public class BooksMDBContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Book> Books { get; set; }
@@ -15,5 +15,7 @@ namespace BooksManagement_DataAccess
             optionsBuilder.UseSqlServer("Data source = (localdb)\\MSSQLLocalDB;" +
                                         "Initial Catalog = BooksManagement");
         }
+
+        
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BooksManagement_DataAccess
+namespace BooksManagement_DataAccess.DatabaseControl
 {
-    internal class DatabaseControlServices : IDatabaseControlServices
+    internal class BookControl
     {
     }
 }
