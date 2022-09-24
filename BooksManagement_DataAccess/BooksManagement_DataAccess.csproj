@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -16,6 +16,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BooksManagement_Domain\BooksManagement_Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DefaultInfo\DefaultUsers.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

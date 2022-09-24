@@ -1,0 +1,28 @@
+[
+  {
+    "UserId": 1,
+    "FullName": "Hussein Issa",
+    "UserName": "hussein",
+    "Password": "2001"
+  },
+  {
+    "UserId": 2,
+    "FullName": "Alaa Alaa Eddin",
+    "UserName": "alaa",
+    "Password": "1234"
+  },
+  {
+    "UserId": 3,
+    "FullName": "Wael Ismail",
+    "UserName": "wael",
+    "Password": "1234"
+  },
+  {
+    "UserId": 4,
+    "FullName": "Mohammad Ahmad",
+    "UserName": "mohammad",
+    "Password": "1234"
+  }
+
+
+]

@@ -4,7 +4,7 @@ using System.Reflection.Metadata;
 
 namespace BooksManagement_DataAccess
 {
-    public class BooksMDBContext : DbContext
+    public class BooksMDbContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Book> Books { get; set; }
