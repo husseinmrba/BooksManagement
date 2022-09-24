@@ -32,6 +32,9 @@ namespace BooksManagement_DataAccess.Migrations
                     b.Property<int>("AvailableCopies")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<double>("Price")
                         .HasColumnType("float");
 

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BooksManagement_DataAccess.Migrations
 {
     [DbContext(typeof(BooksMDBContext))]
-    [Migration("20220924100712_updated")]
-    partial class updated
+    [Migration("20220924125054_adding_property_IsDeleted_to_Book_class")]
+    partial class adding_property_IsDeleted_to_Book_class
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,6 +33,9 @@ namespace BooksManagement_DataAccess.Migrations
 
                     b.Property<int>("AvailableCopies")
                         .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<double>("Price")
                         .HasColumnType("float");
