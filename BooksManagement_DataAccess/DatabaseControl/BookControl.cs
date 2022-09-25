@@ -1,9 +1,4 @@
 ﻿using BooksManagement_Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 namespace BooksManagement_DataAccess.DatabaseControl
 {
     public class BookControl
@@ -109,9 +104,9 @@ namespace BooksManagement_DataAccess.DatabaseControl
                     Console.WriteLine($"Book title: {book.Title}");
                     Console.WriteLine($"Copies of the book are available: {book.AvailableCopies}");
                     Console.WriteLine("-----------------------------------");
-
                 }
-
+                var totalNumberOfCopies = context.Books.Sum(b => b.AvailableCopies);
+                Console.WriteLine($"Total number of copies: {totalNumberOfCopies}");
             }
         }
     }

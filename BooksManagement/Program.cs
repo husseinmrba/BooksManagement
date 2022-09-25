@@ -1,9 +1,7 @@
 ﻿using BooksManagement_DataAccess;
 using BooksManagement_DataAccess.DatabaseControl;
 using BooksManagement_DataAccess.DefaultInfo;
-using BooksManagement_DataAccess.Migrations;
-using BooksManagement_Domain;
-using System.Dynamic;
+using Microsoft.EntityFrameworkCore;
 
 namespace BooksManagement
 {
@@ -21,7 +19,7 @@ namespace BooksManagement
             Console.Write("Enter password: ");
             string password = Console.ReadLine();
 
-            if (UserControl.IsUserExist(username , password))
+            if (UserControl.IsUserExist(username, password))
             {
                 Console.WriteLine("Logged in successfully.");
                 Console.WriteLine("-----------------------------------------------");
@@ -37,10 +35,13 @@ namespace BooksManagement
                     Console.WriteLine("  3-Delete book.");
                     Console.WriteLine("  4-Modify the title and price of a book.");
                     string operation = Console.ReadLine();
+                    if (operation.Contains("0"))
+                    {
+                        Console.WriteLine("Signed out successfully");
+                        break;
+                    }
                     switch (operation)
                     {
-                        case "0":
-                            break;
                         case "1":
                             BookControl.GetBriefInfoAboutBooks();
                             break;
@@ -64,6 +65,8 @@ namespace BooksManagement
             {
                 Console.WriteLine("This user does not exist.");
             }
+
+
 
         }
     }
