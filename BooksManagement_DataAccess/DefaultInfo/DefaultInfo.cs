@@ -11,7 +11,7 @@ namespace BooksManagement_DataAccess.DefaultInfo
 
         public static void AddDefaultUsers()
         {
-            string contents = File.ReadAllText("DefaultUsers.json");
+            string contents = File.ReadAllText("DefaultInfo//DefaultUsers.json");
             var defaultUsers = JsonSerializer.Deserialize<List<User>>(contents);
             foreach (var user in defaultUsers)
             {
